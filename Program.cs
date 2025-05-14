@@ -5,4 +5,5 @@ using Tasks;
 
 // Main program entry point
 // await Summarizer.RunAsync();
-await Pluggin.RunAsync();
+// await Pluggin.RunAsync();
+await PersistantMemory.RunAsync();

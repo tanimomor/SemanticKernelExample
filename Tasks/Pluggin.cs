@@ -29,10 +29,22 @@ namespace Tasks
 
             var arguments = new KernelArguments() { ["input"] = "I'm a software developer. What's my favorite language?", ["style"] = "funny" };
 
-            var result = await kernel.InvokeAsync(funPluginFunctions["Joke"], arguments);
+            Console.WriteLine($@"=========================================
+Arguments: 
+  input: {arguments["input"]}
+  style: {arguments["style"]}
+=========================================");
 
-            Console.WriteLine(result.ToString());
-
+            try
+            {
+                var result = await kernel.InvokeAsync(funPluginFunctions["Joke"], arguments);
+                Console.WriteLine($"Result: {result}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+            }
         }
     }
 }
