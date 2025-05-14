@@ -1,0 +1,17 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Environment variables
+.env
+
+# Editor files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log 
